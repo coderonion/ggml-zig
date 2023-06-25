@@ -13,6 +13,7 @@ pub fn main() !void {
     };
 
     const ctx0 = c.ggml_init(params);
+    defer c.ggml_free(ctx0);
 
     const t1 = c.ggml_new_tensor_1d(ctx0, c.GGML_TYPE_F32, 10);
     const t2 = c.ggml_new_tensor_2d(ctx0, c.GGML_TYPE_I16, 10, 20);
@@ -37,8 +38,6 @@ pub fn main() !void {
     try std.testing.expect(t3.*.nb[3]  == 10*20*30*@sizeOf(i32));
 
     c.ggml_print_objects(ctx0);
-
-    c.ggml_free(ctx0);
 
     _ = try std.io.getStdIn().reader().readByte();
 }

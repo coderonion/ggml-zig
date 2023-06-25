@@ -1,0 +1,15 @@
+digraph G {
+  newrank = true;
+  rankdir = LR;
+  "00000225cc0f8280" [ style = filled; fillcolor = yellow; shape = record; label="node_0 (f32)|0 [1, 1, 1] | <x>none | <g>x+y"; ]
+  "00000225cc0f87d0" [ style = filled; fillcolor = green; shape = record; label="node_1 (f32)|1 [1, 1, 1] | <x>x*y | <g>x+y"; ]
+  "00000225cc0f8390" [ style = filled; fillcolor = yellow; shape = record; label="node_2 (f32)|2 [1, 1, 1] | <x>none | <g>x+y"; ]
+  "00000225cc0f89f0" [ style = filled; fillcolor = green; shape = record; label="node_3 (f32)|3 [1, 1, 1] | <x>x*y | <g>x+y"; ]
+  "00000225cc0f8c10" [ style = filled; fillcolor = green; shape = record; label="node_4 (f32)|4 [1, 1, 1] | <x>x+y | <g>none"; ]
+  "00000225cc0f8280":x -> "00000225cc0f87d0":x [ arrowhead = vee; style = solid; label = "x"; ]
+  "00000225cc0f8280":x -> "00000225cc0f87d0":x [ arrowhead = vee; style = solid; label = "y"; ]
+  "00000225cc0f8280":x -> "00000225cc0f89f0":x [ arrowhead = vee; style = solid; label = "x"; ]
+  "00000225cc0f8390":x -> "00000225cc0f89f0":x [ arrowhead = vee; style = solid; label = "y"; ]
+  "00000225cc0f87d0":x -> "00000225cc0f8c10":x [ arrowhead = vee; style = solid; label = "x"; ]
+  "00000225cc0f89f0":x -> "00000225cc0f8c10":x [ arrowhead = vee; style = solid; label = "y"; ]
+}
