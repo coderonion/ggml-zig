@@ -1,0 +1,15 @@
+*.o
+*.a
+.DS_Store
+.build/
+.cache/
+.direnv/
+.envrc
+.swiftpm
+.venv
+.clang-tidy
+.vs/
+.vscode/
+
+zig-out/
+zig-cache/
