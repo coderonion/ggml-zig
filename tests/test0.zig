@@ -1,12 +1,12 @@
 const std = @import("std");
 const c = @cImport({
-    @cInclude("ggml/ggml.h");
     @cInclude("stdio.h");
     @cInclude("stdlib.h");
+    @cInclude("ggml/ggml.h");
 });
 
 pub fn main() !void {
-    const params: c.ggml_init_params = .{
+    const params = .{
         .mem_size   = 128*1024*1024,
         .mem_buffer = null,
         .no_alloc   = false,
