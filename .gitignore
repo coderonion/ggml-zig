@@ -10,7 +10,8 @@
 .clang-tidy
 .vs/
 .vscode/
-*.dot
 
 zig-out/
 zig-cache/
+
+*.dot
