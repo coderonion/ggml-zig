@@ -1,6 +1,6 @@
 const std = @import("std");
 
-// Zig Version: 0.11.0-dev.3798+a5e15eced
+// Zig Version: 0.11.0-dev.3867+ff37ccd29
 // Zig Build Command: zig build
 // Zig Run Command: zig build -h
 //     zig build run_zig_test0
