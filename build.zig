@@ -62,8 +62,8 @@ pub fn build(b: *std.Build) void {
             .target = target,
             .optimize = optimize,
         });
-        exe.addIncludePath("./thirdparty/ggml/include");
-        exe.addIncludePath("./thirdparty/ggml/include/ggml");
+        exe.addIncludePath(.{ .path = "./thirdparty/ggml/include"});
+        exe.addIncludePath(.{ .path = "./thirdparty/ggml/include/ggml" });
         exe.addCSourceFiles(&.{
             "./thirdparty/ggml/src/ggml.c",
         }, &.{"-std=c11"});
